@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="css/bootstrap.css" rel="stylesheet">
+  <title>Storyteller</title>
+
+  <script src="app/public/js/jquery-3.2.1.js"></script>
+
+  <style>
+    input[type='submit'], button, [aria-label]{
+      cursor: pointer;
+    }
+    #spoiler{
+      display: none;
+    }
+
+    #add-title{
+      font-size: 30px;
+      font-style: normal;
+      font-weight: bold;
+      font-family: monospace;
+      margin-left: 50px;
+      margin-top: 20px;
+    }
+    #add-body{
+      margin-left: 50px;
+      margin-top: 30px;
+    }
+    #add{
+      margin-left: 50px;
+      margin-top: 40px;
+    }
+    #table{
+      margin-left: 350px;
+      margin-top: 200px;
+    }
+  </style>
+
+</head>
+<body>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid" style="box-shadow: 0 0 5px black;">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html"><img src="images/pic12.png" height="50px" width="50px"/></b></a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+    <li><a href="#">Share</a></li>
+        <li><a href="#">Notification</a></li>
+    <li><a href="profile.html">Profile</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+    </nav>
+
+
+
+<table>
+  <tr>
+    <td>
+<div>
+<form action="javascript:void(0);" method="POST" onsubmit="addNote()">
+  <input type="text" id="add-title" placeholder="Title here"><br>
+  <textarea cols="50" rows="20" id="add-body" placeholder="Start here..." data-scroll="native"></textarea><br>
+  <input type="submit" id="add" value="Add">
+</form>
+
+<!--<div id="spoiler" role="aria-hidden">
+  <form action="javascript:void(0);" method="POST" onsubmit="saveEdit()">
+    <input type="text" id="edit-title">
+    <input type="text" id="edit-body">
+    <input type="submit" value="Edit">
+  </form>
+</div>
+</div>-->
+</td>
+<td>
+<div>
+<div id="table">
+<table>
+  <tr>
+    <th>ID</th>
+    <br>
+    <br>
+    <th>Title</th>
+    <br>
+    <br>
+    <th>Text</th>
+    <br>
+    <br>
+  </tr>
+    <tbody id="notes">
+    </tbody>
+</table>
+</div>
+</div>
+</td>
+</tr>
+</table>
+
+<!-- <script src="app/public/js/script1.js"></script> -->
+<script src="app/public/js/script2.js"></script>
+<!-- <script src="app/public/js/script3.js"></script> -->
+</body>
+</html>
