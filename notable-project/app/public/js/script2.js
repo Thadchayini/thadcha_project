@@ -10,7 +10,7 @@ function addNote(){
   var params = "text="+text+"&title="+title;
 
   $.post(baseUrl+"notes",params,function(data){
-      document.getElementById("notes").innerHTML = "<tr><td id='id1'>"+data._id+"</td><td id='title1'></td><br><td id='body1'></td><br><td><button onclick='displayNote()'>View</button></td><br><td><button onclick='editNote()'>Edit</button></td><br><td><button onclick='deleteNote()'>Delete</button></td></tr>";
+      document.getElementById("notes").innerHTML = "<tr><td id='id1'>"+data._id+"</td><br><td id='title1'>"+data.title+"</td><br><td id='body1'>"+data.text+"</td><td><button onclick='editNote()'>Edit</button></td><td><button onclick='deleteNote()'>Delete</button></td></tr>";
       document.getElementById("add-title").value = "";
       document.getElementById("add-body").value = "";
     });

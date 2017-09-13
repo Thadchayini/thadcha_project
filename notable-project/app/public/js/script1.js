@@ -13,13 +13,14 @@ function addNote(){
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       var data = JSON.parse(this.responseText);
-      document.getElementById("notes").innerHTML = //"<tr><td id='id1'>"+data._id+
-      "</td>
-      <td id='title1'></td>
-      <td id='body1'></td>
-      <td><button onclick='displayNote()'>View</button></td>
-      <td><button onclick='editNote()'>Edit</button></td>
-      <td><button onclick='deleteNote()'>Delete</button></td>
+      document.getElementById("notes").innerHTML =
+      "<tr>
+      <td id='id1'>"+data._id+"</td><br>
+      <td id='title1'> "+data.title+"</td><br>
+      <td id='body1'>  "+data.text+"</td>
+      <td><button onclick='displayNote()'></button></td>
+      <td><button onclick='editNote()'></button></td>
+      <td><button onclick='deleteNote()'></button></td>
      </tr>";
       document.getElementById("add-title").value = "";
       document.getElementById("add-body").value = "";
